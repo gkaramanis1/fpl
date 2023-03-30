@@ -1,0 +1,24 @@
+from bootstrap static
+now_cost
+selected_by_percent
+status
+team
+total_points
+minutes
+goals_scored
+assists
+clean_sheets
+goals_conceded
+penalties_saved
+penalties_missed
+yellow_cards
+red_cards
+saves
+bonus
+influence
+creativity
+threat
+ict_index
+corners_and_indirect_freekicks_order
+direct_freekicks_order
+penalties_order
