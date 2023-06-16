@@ -12,5 +12,9 @@ def index():
     forwards = filter(lambda player: player["position"] == "Forward", picks)
     return render_template('home.html', goalkeepers=goalkeepers, defenders=defenders, midfielders=midfielders, forwards=forwards)
 
+@app.route('/stats')
+def stats():
+    return render_template('stats.html', title='Stats')
+
 if __name__ == "__main__":
     app.run(debug=True)

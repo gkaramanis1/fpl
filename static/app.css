@@ -1,0 +1,31 @@
+/* apply this to the container you want to animate */
+
+.body {
+    background: linear-gradient(-45deg, #00ff85, #04f5ff, #38003c);
+    background-size: 400% 400%;
+    animation: gradient-bg 20s ease infinite;
+}
+
+@keyframes gradient-bg {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.bg-steel .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  }
+  
+  .bg-steel .navbar-toggler:focus {
+	box-shadow: none;
+  }
+  
+  .navbar-toggler-icon.open {
+	background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M 5,25 L 25,5 M 5,5 L 25,25" /%3E%3C/svg%3E');
+  }
