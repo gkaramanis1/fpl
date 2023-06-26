@@ -3,14 +3,14 @@
     <div class="justify-content-center">
         <div class="row justify-content-center">
             {% for pick in goalkeepers %}
-            <div class="col">
+            <div class="col-2">
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <img srcset="{{ pick['image_url'] }}" alt="Player Image"><br>
-                    <div style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
+                    <div class="box" style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
                         <div style="background-color:rgb(55, 0, 60); color: #fff;border-top-left-radius: 5px; border-top-right-radius: 5px;  padding: 2px;">
-                        <b>{{ pick['web_name'] }}</b><br>
+                        <b class="title">{{ pick['web_name'] }}</b><br>
                         </div>
-                        <div style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
+                        <div class="description" style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
                             {{ pick['team'] }}<br>
                             {{ (pick['now_cost']/10)|float|string }} £
                         </div>
@@ -21,14 +21,14 @@
         </div>
         <div class="row justify-content-center">
             {% for pick in defenders %}
-            <div class="col">
+            <div class="col-2">
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <img srcset="{{ pick['image_url'] }}" alt="Player Image"><br>
-                    <div style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
+                    <div class="box" style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
                         <div style="background-color:rgb(55, 0, 60); color: #fff;border-top-left-radius: 5px; border-top-right-radius: 5px;  padding: 2px;">
-                        <b>{{ pick['web_name'] }}</b><br>
+                        <b class="title">{{ pick['web_name'] }}</b><br>
                         </div>
-                        <div style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
+                        <div class="description" style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
                             {{ pick['team'] }}<br>
                             {{ (pick['now_cost']/10)|float|string }} £
                         </div>
@@ -39,14 +39,14 @@
         </div>
         <div class="row justify-content-center">
             {% for pick in midfielders %}
-            <div class="col">
+            <div class="col-2">
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <img srcset="{{ pick['image_url'] }}" alt="Player Image"><br>
-                    <div style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
+                    <div class="box" style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
                         <div style="background-color:rgb(55, 0, 60); color: #fff;border-top-left-radius: 5px; border-top-right-radius: 5px;  padding: 2px;">
-                        <b>{{ pick['web_name'] }}</b><br>
+                        <b class="title">{{ pick['web_name'] }}</b><br>
                         </div>
-                        <div style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
+                        <div class="description" style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
                             {{ pick['team'] }}<br>
                             {{ (pick['now_cost']/10)|float|string }} £
                         </div>
@@ -57,14 +57,14 @@
         </div>
         <div class="row justify-content-center">
             {% for pick in forwards %}
-            <div class="col">
+            <div class="col-2">
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <img srcset="{{ pick['image_url'] }}" alt="Player Image"><br>
-                    <div style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
+                    <div class="box" style="font-family: 'Radikal', Arial, sans-serif; text-align: center; margin-bottom: 30px;">
                         <div style="background-color:rgb(55, 0, 60); color: #fff;border-top-left-radius: 5px; border-top-right-radius: 5px;  padding: 2px;">
-                        <b>{{ pick['web_name'] }}</b><br>
+                        <b class="title">{{ pick['web_name'] }}</b><br>
                         </div>
-                        <div style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
+                        <div class="description" style="background-color: rgba(255, 255, 255, 0.4); color: rgb(55, 0, 60); padding: 2px;">
                             {{ pick['team'] }}<br>
                             {{ (pick['now_cost']/10)|float|string }} £
                         </div>
@@ -81,6 +81,15 @@
                 max-width: 70px;
                 max-height: 100px;
             }
+            .box {
+                width: 75px;
+            }
+            .title {
+                font-size: 10px;
+            }
+            .description {
+                font-size: 10px;
+            }
         }
     
         /* Big screen */
@@ -89,7 +98,9 @@
                 max-width: 90px;
                 max-height: 120px;
             }
+            .box {
+                width: 150px;
+            }
         }
     </style>
-</body>
 {% endblock content %}
