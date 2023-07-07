@@ -101,10 +101,10 @@ def getNextWeekPicks():
     df_events = pd.json_normalize(r['events'])
 
     # Next gameweek.
-    # next_gameweek = df_events.loc[df_events["is_next"] == True].id.loc[0]
+    next_gameweek = df_events.loc[df_events["is_next"] == True].id.loc[0]
 
     # season is over so next gameweek would be null
-    next_gameweek = 38
+    # next_gameweek = 38
 
     # Create team dataframe and reduces columns.
     df_teams = pd.json_normalize(r['teams'])
