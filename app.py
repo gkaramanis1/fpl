@@ -17,5 +17,5 @@ def index():
     # return render_template('stats.html', title='Stats')
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=443)
+    app.run(host="0.0.0.0", port=80)
     
