@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 # Bundle app source
 COPY . .
 
-EXPOSE 80
+EXPOSE 443
 ENTRYPOINT python3 app.py
 # CMD [ "flask", "run","--host","0.0.0.0","--port","5000"]
