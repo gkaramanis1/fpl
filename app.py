@@ -1,7 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, Response
 from analysis.getData import getNextWeekPicks
 
 app = Flask(__name__)
+
+@app.route('/healthcheck')
+def healthcheck():
+    return Response(status=200)
 
 @app.route('/')
 def index():
